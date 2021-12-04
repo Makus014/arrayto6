@@ -52,3 +52,30 @@ int main() {
 	return 0;
                                   
                                   
+//Smallest number
+							#include <iostream>
+#include <algorithm>
+#include <array>
+using namespace std;
+
+
+int main() {
+
+	array<int, 10> user;
+	int number = 0;
+
+	cout << "Type any number" << endl;
+
+	for (int i = 0; i < 10; i++) {
+		cin >> user[i];
+		if (number < user[i]) {
+			sort(user.begin(), user.end());
+			reverse(user.begin(), user.end());
+			number = user[i];
+		}
+
+	}
+	cout << "The smallest number is " << number << endl;
+
+	return 0;
+}
